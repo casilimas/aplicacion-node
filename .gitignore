@@ -1,0 +1,17 @@
+
+# Ignorar node_modules
+node_modules/
+
+# Ignorar archivos de configuración y dependencias
+.env
+package.json
+package-lock.json
+start.bat
+
+# Otras posibles exclusiones
+build/
+dist/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
