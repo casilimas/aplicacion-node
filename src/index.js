@@ -10,6 +10,7 @@ connectDB();
 
 // Middlewares y rutas
 app.use(express.json());
+app.use('/api', rutas);
 app.use('/aplicacion', rutas);
 
 const PORT = process.env.PORT || 3000;
