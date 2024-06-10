@@ -1,12 +1,12 @@
 
 
 const emailValidator = (email) => {
-    const regex = /^[a-zA-Z0-9._%+-]+@hotmail\.com$/;
+  const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return regex.test(email);
   };
 
   const nameValidator = (name) => {
-    const regex = /^[a-zA-Z]{1,50}$/; // Solo letras, máximo 50 caracteres
+    const regex = /^[a-zA-Z\s]{1,50}$/;
     return regex.test(name);
   };
 
@@ -20,4 +20,13 @@ const emailValidator = (email) => {
     nameValidator,
     idValidator
   };
-  
+
+
+  /*
+    https://es.stackoverflow.com/search?q=expresiones+regulares+para+email
+    Se corrigió linea 4 el error en las expresiones regulares para correos electrónicos para aceptar todos 
+    los dominios.
+    Adicionalmente, en la línea 9, se modificó la validación para aceptar espacios en los campos nombres y 
+    apellidos.
+  */
+ 
