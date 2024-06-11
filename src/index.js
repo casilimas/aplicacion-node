@@ -1,9 +1,13 @@
 const express = require('express');
 const connectDB = require('./db/connection');
 require('dotenv').config();
+const cors = require('cors');
 
 const rutas = require('./routers/rutas'); 
 const app = express();
+app.use(cors({
+    origin: 'http://localhost:5173' 
+  }));
 
 // Conectar a la base de datos
 connectDB();
